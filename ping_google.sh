@@ -6,7 +6,7 @@ if [ -f file.err ]
 	then rm file.err
 fi
 
-fping -c3 8.8.4.4 2>&1 > file.tmp
+fping -c3 8.8.4.0 2>&1 > file.tmp
 if [ $? == 0 ]
 then
 	mv file.tmp file.ok
