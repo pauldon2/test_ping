@@ -1,5 +1,5 @@
 #!/bin/bash
-IP=8.8.8.8
+IP=8.8.8.0
 if [ -f file.ok ]
 	then rm file.ok
 fi
