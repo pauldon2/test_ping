@@ -7,7 +7,7 @@ if [ -f file.err ]
 	then rm file.err
 fi
 
-fping -c3 $IP 2>&1 > file.tmp
+/usr/sbin/fping -c3 $IP 2>&1 > file.tmp
 if [ $? == 0 ]
 then
 	mv file.tmp file.ok
