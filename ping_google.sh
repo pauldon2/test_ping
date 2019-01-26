@@ -1,5 +1,5 @@
 #!/bin/bash
-IP=8.8.8.0
+IP=8.8.8.8
 find . -name "file.*" -delete
 
 /usr/sbin/fping -c3 $IP 2>&1 > file.tmp
