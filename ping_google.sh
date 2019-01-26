@@ -1,11 +1,6 @@
 #!/bin/bash
 IP=8.8.8.0
-if [ -f file.ok ]
-	then rm file.ok
-fi
-if [ -f file.err ]
-	then rm file.err
-fi
+find . -name "file.*" -delete
 
 /usr/sbin/fping -c3 $IP 2>&1 > file.tmp
 if [ $? == 0 ]
