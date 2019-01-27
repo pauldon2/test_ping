@@ -18,7 +18,7 @@ pipeline {
             steps {
                 sh "date"
                 echo 'Prepare'
-                checkout([$class: 'GitSCM', branches: [[name: '$BRANCH_NAME']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/pauldon2/test_ping']]])
+                checkout([$class: 'GitSCM', branches: [[name: '${BRANCH_NAME}']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/pauldon2/test_ping']]])
             }
         }
         stage('Run job') {
